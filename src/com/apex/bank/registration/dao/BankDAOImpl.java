@@ -22,7 +22,7 @@ public class BankDAOImpl implements BankDAO {
 		return sessionFactory;
 	}
 
-	public Integer addBankInfo(BankVO bvo) {
+	public void addBankInfo(BankVO bvo) {
 		Session session = getSessionFactory().openSession();
 		session.beginTransaction();
 		session.save(bvo);
@@ -30,7 +30,7 @@ public class BankDAOImpl implements BankDAO {
 		session.close();
 		System.out.println("Successfully created " + bvo.toString());
 		
-		return bvo.getId();
+		
 
 	}
 

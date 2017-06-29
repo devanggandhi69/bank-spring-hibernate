@@ -17,7 +17,7 @@ public class BankInfoController {
 	@Autowired
 	private BankService bankService = null;
 	
-	@RequestMapping("/displayregistration.do")
+	@RequestMapping("/")
 	public String displayPage(Model model){
 		BankVO bvo= new BankVO();
 		model.addAttribute("userBean",bvo);
